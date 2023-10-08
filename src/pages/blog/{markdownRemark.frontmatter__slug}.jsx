@@ -1,5 +1,7 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
+
+import { Icon } from "@iconify/react";
 
 const BlogTemplate = ({
     data, // this prop will be injected by the GraphQL query below.
@@ -7,13 +9,22 @@ const BlogTemplate = ({
     const { markdownRemark } = data; // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark;
     return (
-        <section className="py-16">
-            <div className="container text-justify flex flex-col">
-                <h4 className="text-xl text-center mb-8 font-semibold">{frontmatter?.title}</h4>
-                {/* <div>{frontmatter?.date}</div> */}
-                <div dangerouslySetInnerHTML={{ __html: html }} />
-            </div>
-        </section>
+        <>
+            <section className="py-8">
+                <div className="container">
+                    <Link to="/">
+                        <Icon icon="ep:back" />
+                    </Link>
+                </div>
+            </section>
+            <section className="">
+                <div className="container text-justify flex flex-col">
+                    <h4 className="text-xl text-center mb-8 font-semibold">{frontmatter?.title}</h4>
+                    {/* <div>{frontmatter?.date}</div> */}
+                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                </div>
+            </section>
+        </>
     );
 };
 

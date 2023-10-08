@@ -7,7 +7,7 @@ interface DefaultLayoutProps {
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     return (
         <>
-            <main className="min-h-screen py-16">{children}</main>
+            <main className="min-h-screen">{children}</main>
         </>
     );
 };
