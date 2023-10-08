@@ -16,13 +16,24 @@ const Home = ({ data }: Query) => {
     } = data;
 
     return (
-        <section>
-            <div className="container">
-                {posts?.map((post, index) => (
-                    <PostCard key={`post-${index}`} post={post} />
-                ))}
-            </div>
-        </section>
+        <>
+            <section>
+                <div className="container pb-4">
+                    <h5 className="text-xl text-center mb-4">Teatro mágico</h5>
+                </div>
+            </section>
+            <section>
+                <div className="container">
+                    <div className="flex flex-col gap-6 max-w-[450px]">
+                        {posts?.map((post, index) => (
+                            <>
+                                <PostCard key={`post-${index}`} post={post} />
+                            </>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </>
     );
 };
 

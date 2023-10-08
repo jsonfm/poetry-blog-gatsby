@@ -7,11 +7,13 @@ const BlogTemplate = ({
     const { markdownRemark } = data; // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark;
     return (
-        <div>
-            <div>
+        <section className="py-16">
+            <div className="container text-justify flex flex-col">
+                <h4 className="text-xl text-center mb-8 font-semibold">{frontmatter?.title}</h4>
+                {/* <div>{frontmatter?.date}</div> */}
                 <div dangerouslySetInnerHTML={{ __html: html }} />
             </div>
-        </div>
+        </section>
     );
 };
 

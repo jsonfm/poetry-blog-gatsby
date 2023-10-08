@@ -1,19 +1,23 @@
 import React from "react";
 import { Link } from "gatsby";
+import { truncate, cleanText } from "../../../utils/strings";
 
 interface PostCard {
     post: Post;
 }
 
 export const PostCard = ({ post }: PostCard) => {
-    const truncated = post?.node?.html?.slice(20);
+    const truncated = cleanText(truncate(post?.node?.html, 80));
     return (
         <Link to={`/blog${post?.node?.frontmatter?.slug}`}>
             <div>
-                <h3>{post?.node?.frontmatter?.title}</h3>
-                <p className="text-ellipsis overflow-hidden">
+                <span className="text-xs">{post?.node?.frontmatter?.date}</span>
+                <h3 className="font-bold">{post?.node?.frontmatter?.title}</h3>
+
+                <div className="text-ellipsis overflow-hidden">
                     <div dangerouslySetInnerHTML={{ __html: truncated }} />
-                </p>
+                </div>
+                {/* <p className="font-semibold text-sm">Leer más {`>>`}</p> */}
             </div>
         </Link>
     );
