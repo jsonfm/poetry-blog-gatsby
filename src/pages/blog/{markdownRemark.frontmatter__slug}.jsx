@@ -21,7 +21,8 @@ const BlogTemplate = ({
                 <div className="container text-justify flex flex-col">
                     <h4 className="text-xl text-center mb-8 font-semibold">{frontmatter?.title}</h4>
                     {/* <div>{frontmatter?.date}</div> */}
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                    <div className="pb-16" dangerouslySetInnerHTML={{ __html: html }} />
+                    {/* <div>Aquí un texto de prueba.</div> */}
                 </div>
             </section>
         </>
