@@ -5,7 +5,6 @@ import "./src/styles/global.css";
 
 export const wrapPageElement: GatsbyBrowser["wrapPageElement"] = ({ element }) => {
     React.useEffect(() => {
-        
         if(!localStorage) return;
         if(!localStorage?.theme){
             localStorage.theme = "dark";

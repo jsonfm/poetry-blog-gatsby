@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 
 export const Header = () => {
     const onToggleTheme = () => {
-        console.log(localStorage.theme);
+   
         if(localStorage.theme != "dark"){
             document.documentElement.classList.add("dark");
             localStorage.theme = "dark";
@@ -14,10 +14,10 @@ export const Header = () => {
         }
     }
     return (
-        <header className="pt-3 md:pt-6 w-full h-16 mb-5">
+        <header className="pt-3 md:pt-6 w-full h-16 mb-5 ">
             <nav className="px-2 container w-full h-full flex items-center justify-between">
-                <span className="rounded-sm whitespace-nowrap flex items-center">
-                    <Link className="text-xl font-semibold" to="/">
+                <span className="p-0 rounded-sm whitespace-nowrap flex items-center">
+                    <Link className="text-xl font-semibold hover:bg-gray-500/10 dark:hover:bg-gray-100/10 p-2 duration-200 rounded-md select-none flex items-center" to="/">
                         Sxgitario
                     </Link>
                 </span>
