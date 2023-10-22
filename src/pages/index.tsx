@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { PostCard } from "../components/blog/PostCard";
+import { Header } from "../layout/default/Header";
 
 interface Query {
     data: {
@@ -17,13 +18,9 @@ const Home = ({ data }: Query) => {
 
     return (
         <>
-            <section>
-                <div className="container pt-8 pb-4">
-                    <h5 className="text-xl text-center mb-4">Teatro mágico</h5>
-                </div>
-            </section>
-            <section>
-                <div className="container pb-12">
+            <Header/>
+            <section className="pb-12">
+                <div className="container">
                     <div className="flex flex-col gap-6 max-w-[450px]">
                         {posts?.map((post, index) => (
                             <>

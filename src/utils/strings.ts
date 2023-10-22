@@ -7,5 +7,5 @@ export const truncate = (string: string, length: number = 20): string => {
 };
 
 export const cleanText = (text: string): string => {
-    return text?.replace(/\n/g, "");
+    return text?.replace(/\n/g, "")?.replace("\n", "");
 };

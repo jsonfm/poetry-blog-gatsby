@@ -11,13 +11,10 @@ export const PostCard = ({ post }: PostCard) => {
     return (
         <Link to={`/blog${post?.node?.frontmatter?.slug}`}>
             <div>
-                {/* <span className="text-xs">{post?.node?.frontmatter?.date}</span> */}
                 <h3 className="font-bold">{post?.node?.frontmatter?.title}</h3>
-
-                <div className="text-ellipsis overflow-hidden h-12 overflow-y-auto">
+                <div className="text-gray-300 text-ellipsis overflow-hidden h-10 md:h-12 overflow-y-auto">
                     <div dangerouslySetInnerHTML={{ __html: truncated }} />
                 </div>
-                {/* <p className="font-semibold text-sm">Leer más {`>>`}</p> */}
             </div>
         </Link>
     );

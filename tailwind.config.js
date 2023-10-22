@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [`./src/pages/**/*.{js,jsx,ts,tsx}`, `./src/components/**/*.{js,jsx,ts,tsx}`],
+    content: [`./src/pages/**/*.{js,jsx,ts,tsx}`, `./src/components/**/*.{js,jsx,ts,tsx}`, `./src/layout/**/*.{js,jsx,ts,tsx}`],
     theme: {
         extend: {
             colors: {
-                neutral: "#1e1e1e",
+                neutral: "#1c1c1c",
             },
         },
     },
