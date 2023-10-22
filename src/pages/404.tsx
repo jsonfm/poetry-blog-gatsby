@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link, HeadFC, PageProps } from "gatsby"
 import { Header } from "../layout/default/Header"
+import { SEO } from "../components/SEO"
 
 
 const NotFoundPage: React.FC<PageProps> = () => {
@@ -20,6 +21,11 @@ const NotFoundPage: React.FC<PageProps> = () => {
   )
 }
 
-export default NotFoundPage
+export default NotFoundPage;
 
-export const Head: HeadFC = () => <title>Not found</title>
+
+export const Head = () => {
+  return (
+      <SEO />
+  )
+}

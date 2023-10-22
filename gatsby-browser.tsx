@@ -13,3 +13,6 @@ export const wrapPageElement: GatsbyBrowser["wrapPageElement"] = ({ element }) =
     }, []);
     return <DefaultLayout>{element}</DefaultLayout>;
 };
+
+
+

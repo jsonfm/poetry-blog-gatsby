@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { PostCard } from "../components/blog/PostCard";
 import { Header } from "../layout/default/Header";
+import { SEO } from "../components/SEO";
 
 interface Query {
     data: {
@@ -52,3 +53,10 @@ export const query = graphql`
 `;
 
 export default Home;
+
+
+export const Head = () => {
+    return (
+        <SEO />
+    )
+}
