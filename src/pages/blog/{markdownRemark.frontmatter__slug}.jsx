@@ -15,7 +15,7 @@ const BlogTemplate = ({
             <Header/>
             <section className="">
                 <div className="container text-justify flex flex-col">
-                    <h4 className="text-xl mb-5 font-semibold">{frontmatter?.title}</h4>
+                    <h4 className="text-xl mb-5 font-bold">{frontmatter?.title}</h4>
                     {/* <div>{frontmatter?.date}</div> */}
                     <div className="pb-16" dangerouslySetInnerHTML={{ __html: html }} />
                 </div>
