@@ -10,7 +10,7 @@ export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     return (
         <>
             <main className="min-h-screen">{children}</main>
-            <Footer/>
+            {/* <Footer/> */}
         </>
     );
 };
